@@ -1,0 +1,19 @@
+int wain(int* a, int b) {
+  int* reverse = NULL;
+  int i = 0;
+  int j = 0;
+  reverse = new int[b];
+  j = b-1;
+  while(i < b) {
+    *(reverse+i) = *(a+j);
+    i = i + 1;
+    j = j - 1;
+  }
+  j = j + 1;
+  while(j < b) {
+    println(*(reverse+j));
+    j = j + 1;
+  }
+  delete [] reverse;
+  return 0;
+}
